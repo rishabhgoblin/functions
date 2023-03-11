@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align="center">functions</h1>
+    <pre>
+ Que 1 :Create one function with zero parameter having a console statement.
+
+Ans:
+
+  const myfunction =()=>console.log("hi");
+                myfunction();
+    
+
+Que 2 :Create one function which takes two values as a parameter and print the sum of them as "Sum of 3, 4 is 7.
+
+Ans:
+
+   const myfunction =(a,b)=>console.log(`Sum of ${a}, ${b} is ${a+b}`);
+    myfunction(3,4);
+    
+
+Que 3 :Create one arrow function.
+
+Ans:
+
+  const myFun(() => console.log("hi");
+    myFun();
+    
+
+Que 4 :Print the Output.
+
+   var x = 21;
+    var girl = function () {
+        console.log(x);
+        var x = 20;
+    };
+    girl ();
+    
+Ans:undefined
+
+        We know that if we declare variable outside of the function(means Global 
+        Variable) then it'll be accessible & updatable in the whole program anywhere.
+        
+        And we know that we can declare variable again and again by using var 
+        keyword. But with the let keyword we can't declare more than once.
+        
+        Right declaration with ""var"" keyword: var x= 10; var x=11;   // Value will be of x
+        11 with second time declared variable and first time declared variable will not be
+        accessable or it has been removed already when we declare the second time.  
+        
+        Wrong declaration with ""let"" keyword: let n=10; let n=11; // we can't declare 
+        variable again by using let keyword. it'll give error.
+        
+        But if we declare variable with same name in the function as we declare in
+        the Global variable then variable which is present inside the function it'll work 
+        as local variable(Function Scope). 
+        
+        That's why here x will print the "undefined".
+    
+
+Que 5 :Print the Output.
+
+    var x = 21;
+    girl ();
+    console.log(x)
+    function girl() {
+        console.log(x);
+        var x = 20;
+    };
+Ans:undefined & 21
+
+    We knows the hoisting rule in JS if any variable we want to access before it's 
+    declaration & we declare variable after the accessible statement it is possible because
+    Hoisting handles this. It brings the declaration above.
+    
+    Note: it's only bring the declaration above not bring the intialization & assignment above.
+    Ex:- 
+    console.log(x);  //accessible statement & we are accessing variable before its declaration
+    var x =20;  // here it'll bring only declaration means var = x ; 
+    
+    That's why here our answer will be :
+    undefined
+    21
+
+Que 6 : Print the Output.
+
+    var x = 21;
+    a();
+    b();
+    
+    function a() {
+       x = 20;
+      console.log(x);
+    };
+    function b() {
+        
+        x = 40;
+       console.log(x);
+    };
+    
+Ans:20 & 40
+
+        we know that in JS without declaring the variable doesn't give any error means we can 
+        use variable only without writing as var x = 21;
+        
+        we can simply write it as x=21; // it will not give any error
+        
+        that's why here our output will be:
+        20
+        40
+    
+
+Que 7:Create one function with zero parameter having a console statement.
+
+Ans:
+
+    var x = 21;
+    a();
+    b();
+    
+    function a() {
+       x = 20;
+      console.log(x);
+    };
+    function b() {
+        
+        x = 40;
+       console.log(x);
+    };
+
+Que 8: Guess the Output.
+
+        function FindSum(a, b){
+            return a + b;
+        }
+        function DisplayData(data, batch){
+            console.log(`I am from ${data} and My batch is EA${batch}`)
+        }
+        DisplayData("PrepBytes", FindSum(10, 9));
+    
+Ans: I am from PrepBytes and My batch is EA19
+
+
+Que 9: Guess the Output.
+
+    Abc();
+    const Abc = function(){
+        let value = 20;
+        console.log(value);
+    }
+Ans:Uncaught ReferenceError: Cannot access 'Abc' before initialization
+
+
+Que 10: Guess the Output.
+
+    var a = 10;
+    (function (){
+        console.log(a);
+        var a = 20;
+    })();
+Ans: undefined
+
+
+Que 11:Guess the Output.
+
+    const greet =  function(name){
+        return function(m){
+            console.log(`Hi!! ${name}, ${m}`);
+        }
+    }
+    const greet_message = greet('EA19');
+    greet_message("Welcome To PrepBytes")
+Ans: Hi!! EA19, Welcome To PrepBytes
+    </pre>
+</body>
+</html>
